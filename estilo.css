@@ -1,0 +1,453 @@
+
+/* ============================================================
+   RENOVA PJ — TEMA STREAMLIT
+   Identidade visual inspirada na arte Itaú + azul tecnológico
+   Aplicação global: carregar uma única vez no app.py
+   ============================================================ */
+
+:root {
+    --renova-navy: #06143d;
+    --renova-blue: #0b2f82;
+    --renova-blue-2: #124bb8;
+    --renova-blue-light: #2b78e4;
+    --renova-orange: #ff6200;
+    --renova-orange-light: #ff8a24;
+    --renova-white: #f7f9ff;
+    --renova-text: #e9efff;
+    --renova-muted: #9caed3;
+    --renova-card: rgba(10, 31, 78, 0.72);
+    --renova-card-strong: rgba(8, 27, 70, 0.94);
+    --renova-border: rgba(66, 126, 224, 0.34);
+    --renova-shadow: 0 12px 35px rgba(0, 0, 0, 0.28);
+}
+
+/* ------------------------------------------------------------
+   APP / FUNDO
+   ------------------------------------------------------------ */
+
+.stApp {
+    background:
+        radial-gradient(circle at 88% 4%, rgba(255, 98, 0, 0.20), transparent 24%),
+        radial-gradient(circle at 8% 18%, rgba(18, 75, 184, 0.25), transparent 28%),
+        linear-gradient(135deg, #030b25 0%, #06143d 48%, #071b4d 100%);
+    color: var(--renova-text);
+}
+
+.stApp::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background:
+        linear-gradient(115deg, transparent 0%, rgba(26, 91, 196, 0.05) 42%, transparent 43%),
+        linear-gradient(295deg, transparent 0%, rgba(255, 98, 0, 0.045) 55%, transparent 56%);
+    z-index: 0;
+}
+
+/* ------------------------------------------------------------
+   CONTAINER PRINCIPAL
+   ------------------------------------------------------------ */
+
+.block-container {
+    max-width: 1450px;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+/* ------------------------------------------------------------
+   TIPOGRAFIA
+   ------------------------------------------------------------ */
+
+html, body, [class*="css"] {
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+h1, h2, h3, h4 {
+    color: var(--renova-white) !important;
+    font-weight: 750 !important;
+    letter-spacing: -0.025em;
+}
+
+h1 {
+    font-size: clamp(2rem, 4vw, 3.6rem) !important;
+}
+
+h2 {
+    font-size: clamp(1.45rem, 2.5vw, 2.2rem) !important;
+}
+
+h3 {
+    font-size: 1.25rem !important;
+}
+
+p, li, label {
+    color: var(--renova-text) !important;
+}
+
+small {
+    color: var(--renova-muted) !important;
+}
+
+/* ------------------------------------------------------------
+   SIDEBAR
+   ------------------------------------------------------------ */
+
+section[data-testid="stSidebar"] {
+    background:
+        radial-gradient(circle at 80% 5%, rgba(255, 98, 0, 0.14), transparent 25%),
+        linear-gradient(180deg, #041238 0%, #061a4c 100%);
+    border-right: 1px solid rgba(52, 110, 207, 0.30);
+}
+
+section[data-testid="stSidebar"] > div {
+    background: transparent;
+}
+
+section[data-testid="stSidebar"] * {
+    color: var(--renova-text);
+}
+
+section[data-testid="stSidebar"] .stButton > button {
+    width: 100%;
+    text-align: left;
+    justify-content: flex-start;
+}
+
+/* ------------------------------------------------------------
+   BOTÕES
+   ------------------------------------------------------------ */
+
+.stButton > button,
+.stDownloadButton > button,
+button[kind="primary"] {
+    border: 1px solid rgba(255, 132, 48, 0.55) !important;
+    border-radius: 12px !important;
+    background: linear-gradient(135deg, #ff6200 0%, #ff7b19 100%) !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    box-shadow: 0 8px 22px rgba(255, 98, 0, 0.24);
+    transition: all 0.2s ease;
+}
+
+.stButton > button:hover,
+.stDownloadButton > button:hover,
+button[kind="primary"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(255, 98, 0, 0.38);
+    border-color: var(--renova-orange-light) !important;
+}
+
+button[kind="secondary"] {
+    background: rgba(10, 39, 96, 0.78) !important;
+    border: 1px solid var(--renova-border) !important;
+    color: var(--renova-white) !important;
+}
+
+/* ------------------------------------------------------------
+   INPUTS / SELECTS / TEXT AREA
+   ------------------------------------------------------------ */
+
+div[data-baseweb="input"],
+div[data-baseweb="select"] > div,
+div[data-baseweb="textarea"] {
+    background: rgba(7, 26, 68, 0.92) !important;
+    border: 1px solid rgba(75, 130, 220, 0.42) !important;
+    border-radius: 11px !important;
+}
+
+input, textarea {
+    color: var(--renova-white) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #7f94be !important;
+}
+
+div[data-baseweb="select"] span {
+    color: var(--renova-white) !important;
+}
+
+div[data-baseweb="select"] > div:focus-within,
+div[data-baseweb="input"]:focus-within,
+div[data-baseweb="textarea"]:focus-within {
+    border-color: var(--renova-orange) !important;
+    box-shadow: 0 0 0 1px rgba(255, 98, 0, 0.35) !important;
+}
+
+/* ------------------------------------------------------------
+   CARDS / CONTAINERS
+   ------------------------------------------------------------ */
+
+div[data-testid="stVerticalBlockBorderWrapper"] {
+    background: linear-gradient(
+        145deg,
+        rgba(15, 47, 112, 0.72),
+        rgba(5, 23, 62, 0.78)
+    );
+    border: 1px solid var(--renova-border);
+    border-radius: 18px;
+    box-shadow: var(--renova-shadow);
+}
+
+.renova-card {
+    background: linear-gradient(
+        145deg,
+        rgba(15, 47, 112, 0.82),
+        rgba(5, 22, 60, 0.92)
+    );
+    border: 1px solid rgba(58, 119, 219, 0.40);
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: var(--renova-shadow);
+}
+
+.renova-card-orange {
+    background:
+        radial-gradient(circle at 90% 10%, rgba(255, 98, 0, 0.18), transparent 35%),
+        linear-gradient(145deg, rgba(11, 43, 104, 0.94), rgba(6, 20, 56, 0.98));
+    border: 1px solid rgba(255, 98, 0, 0.48);
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.28),
+        0 0 30px rgba(255, 98, 0, 0.07);
+}
+
+/* ------------------------------------------------------------
+   MÉTRICAS
+   ------------------------------------------------------------ */
+
+div[data-testid="stMetric"] {
+    background:
+        linear-gradient(145deg, rgba(14, 48, 116, 0.88), rgba(5, 23, 62, 0.94));
+    border: 1px solid rgba(58, 119, 219, 0.38);
+    border-radius: 16px;
+    padding: 18px 20px;
+    box-shadow: var(--renova-shadow);
+}
+
+div[data-testid="stMetricLabel"] {
+    color: var(--renova-muted) !important;
+    font-weight: 600;
+}
+
+div[data-testid="stMetricValue"] {
+    color: #ffffff !important;
+    font-weight: 800 !important;
+}
+
+div[data-testid="stMetricDelta"] {
+    color: var(--renova-orange-light) !important;
+}
+
+/* ------------------------------------------------------------
+   TABS
+   ------------------------------------------------------------ */
+
+button[data-baseweb="tab"] {
+    color: #aebfe0 !important;
+    font-weight: 650 !important;
+    background: transparent !important;
+}
+
+button[data-baseweb="tab"][aria-selected="true"] {
+    color: #ffffff !important;
+}
+
+div[data-baseweb="tab-highlight"] {
+    background: var(--renova-orange) !important;
+    height: 3px !important;
+}
+
+/* ------------------------------------------------------------
+   EXPANDERS
+   ------------------------------------------------------------ */
+
+details[data-testid="stExpander"] {
+    background: rgba(7, 27, 69, 0.80);
+    border: 1px solid rgba(60, 120, 215, 0.34);
+    border-radius: 14px;
+}
+
+details[data-testid="stExpander"] summary {
+    color: var(--renova-white) !important;
+    font-weight: 650;
+}
+
+details[data-testid="stExpander"]:hover {
+    border-color: rgba(255, 98, 0, 0.45);
+}
+
+/* ------------------------------------------------------------
+   DATAFRAME / TABELAS
+   ------------------------------------------------------------ */
+
+div[data-testid="stDataFrame"] {
+    border: 1px solid rgba(54, 116, 216, 0.34);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: var(--renova-shadow);
+}
+
+/* ------------------------------------------------------------
+   ALERTAS
+   ------------------------------------------------------------ */
+
+div[data-testid="stAlert"] {
+    border-radius: 13px;
+    border-left: 4px solid var(--renova-orange);
+    background: rgba(8, 30, 75, 0.88);
+}
+
+/* ------------------------------------------------------------
+   FILE UPLOADER
+   ------------------------------------------------------------ */
+
+section[data-testid="stFileUploaderDropzone"] {
+    background: rgba(8, 29, 73, 0.78);
+    border: 1px dashed rgba(72, 132, 222, 0.60);
+    border-radius: 15px;
+}
+
+section[data-testid="stFileUploaderDropzone"]:hover {
+    border-color: var(--renova-orange);
+    background: rgba(10, 37, 91, 0.88);
+}
+
+/* ------------------------------------------------------------
+   PROGRESS
+   ------------------------------------------------------------ */
+
+div[data-testid="stProgress"] > div > div {
+    background: linear-gradient(
+        90deg,
+        var(--renova-blue-light),
+        var(--renova-orange)
+    ) !important;
+}
+
+/* ------------------------------------------------------------
+   CHECKBOX / RADIO
+   ------------------------------------------------------------ */
+
+div[data-testid="stCheckbox"] label,
+div[data-testid="stRadio"] label {
+    color: var(--renova-text) !important;
+}
+
+div[data-testid="stCheckbox"] svg,
+div[data-testid="stRadio"] svg {
+    color: var(--renova-orange) !important;
+}
+
+/* ------------------------------------------------------------
+   SCROLLBAR
+   ------------------------------------------------------------ */
+
+::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: #04102f;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+        180deg,
+        var(--renova-blue-2),
+        var(--renova-orange)
+    );
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--renova-orange);
+}
+
+/* ------------------------------------------------------------
+   LINKS
+   ------------------------------------------------------------ */
+
+a {
+    color: #63a4ff !important;
+    text-decoration: none !important;
+    font-weight: 600;
+}
+
+a:hover {
+    color: var(--renova-orange-light) !important;
+}
+
+/* ------------------------------------------------------------
+   SPINNER
+   ------------------------------------------------------------ */
+
+div[data-testid="stSpinner"] {
+    color: var(--renova-orange) !important;
+}
+
+/* ------------------------------------------------------------
+   DECORATIVE HELPERS
+   Pode usar via st.markdown(...)
+   ------------------------------------------------------------ */
+
+.renova-title {
+    font-size: clamp(2.3rem, 5vw, 4.5rem);
+    line-height: 0.95;
+    font-weight: 850;
+    letter-spacing: -0.045em;
+    color: #ffffff;
+}
+
+.renova-title span {
+    color: var(--renova-orange);
+}
+
+.renova-subtitle {
+    font-size: 1.25rem;
+    line-height: 1.55;
+    color: #d7e2f8;
+}
+
+.renova-orange {
+    color: var(--renova-orange) !important;
+}
+
+.renova-blue {
+    color: #63a4ff !important;
+}
+
+.renova-glow {
+    text-shadow: 0 0 22px rgba(255, 98, 0, 0.34);
+}
+
+/* ------------------------------------------------------------
+   MOBILE
+   ------------------------------------------------------------ */
+
+@media (max-width: 768px) {
+    .block-container {
+        padding: 1.2rem 1rem 2rem 1rem;
+    }
+
+    h1 {
+        font-size: 2.25rem !important;
+    }
+
+    h2 {
+        font-size: 1.65rem !important;
+    }
+
+    .renova-card,
+    .renova-card-orange {
+        padding: 18px;
+        border-radius: 14px;
+    }
+
+    div[data-testid="stMetric"] {
+        padding: 14px;
+    }
+}
