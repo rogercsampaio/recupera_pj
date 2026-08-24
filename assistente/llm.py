@@ -1,5 +1,6 @@
 import streamlit as st
 from loguru import logger
+import os
 from langchain_google_genai import ChatGoogleGenerativeAI
 
 # ============================================================
@@ -15,7 +16,7 @@ MODELO_GEMINI = "gemini-3.1-flash-lite"
 def carregar_llm():
     try:
         api_key = st.secrets.get("GEMINI_API_KEY")
-        # alterar depois a exposicao
+        #api_key = os.getenv("GEMINI_API_KEY")
         if not api_key:
             raise ValueError(
                 "A chave 'GEMINI_API_KEY' não foi encontrada "
