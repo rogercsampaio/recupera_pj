@@ -87,7 +87,7 @@ def main():
     # --------------------------------------------------------
 
     if pagina == "📊 Analytics":
-        render_analytics_page()
+        render_assistente_analytics_page()
 
     # --------------------------------------------------------
     # RAG
