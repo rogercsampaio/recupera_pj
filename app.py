@@ -7,6 +7,7 @@ from abas.modelo_preditivo import render_modelo_preditivo_page
 from abas.rag_interface import render_rag_page
 from abas.rag_analytics import render_rag_analtycs
 from abas.assistente_analytics import render_assistente_analytics_page
+from abas.analytics import render_analytics_page
 from conf.logger_config import setup_logs_once
 from conf.proxy_config import configurar_ipv4
 
@@ -86,7 +87,6 @@ def main():
     # --------------------------------------------------------
 
     if pagina == "📊 Analytics":
-
         render_analytics_page()
 
     # --------------------------------------------------------
