@@ -1,7 +1,22 @@
-# 🏦 Renova PJ
 
-O **Renova PJ** é uma aplicação interativa desenvolvida em Python e Streamlit para auxiliar na análise, acompanhamento e modelagem preditiva de recuperação e regularização de crédito para clientes PJ (Pessoas Jurídicas). A ferramenta inclui módulos de visualização temporal da base, análise de target (`regularizou_30d`), dashboards analíticos e métricas de avaliação automatizada de agentes/RAG (*LLM-as-a-Judge*).
+---
 
+O **Renova PJ** é uma solução analítica completa que utiliza Inteligência Artificial para otimizar a recuperação de crédito de Pessoas Jurídicas (PJ). A plataforma reúne um conjunto robusto de ferramentas integradas:
+
+1. **Modelo Preditivo:** Avalia a probabilidade de um cliente regularizar seus débitos nos próximos 30 dias.
+2. **Analytics Avançado:** Mapeia o perfil e o comportamento dos clientes, analisando variáveis como localização, setor, porte, tempo de relacionamento, uso do limite de cartão de crédito, saldo devedor e número de parcelas.
+3. **Base de Conhecimento (RAG):** Centraliza e consulta dados estratégicos, como critérios para ofertas de renegociação, guias de atendimento e políticas de recuperação de crédito.
+4. **Métricas de RAG:** Monitora a volumetria e a estrutura dos documentos indexados na base, exibindo contagem de tokens e palavras no escopo geral e por documento.
+5. **Métricas do Assistente:** Acompanha indicadores de performance da IA baseados no *Golden Set*, mensurando fidelidade, relevância das respostas, precisão de contexto e taxa de revocação (*recall*).
+6. **Assistente Autônomo:** O núcleo da solução. Integrado ao ecossistema da **IA Gemini**, ele consulta informações cadastrais e financeiras, recupera dados operacionais e sugere ações estratégicas em tempo real, respondendo a perguntas como:
+
+* *Qual é o perfil do cliente?*
+* *Qual é a probabilidade de regularização?*
+* *Quais fatores influenciam essa previsão?*
+* *Qual estratégia de renegociação é recomendada?*
+* *Quais evidências e documentos sustentam a recomendação?*
+* *Existem restrições políticas ou regulatórias para essa estratégia?*
+Com essa abordagem de ponta a ponta — unindo preditividade, analytics, RAG e agentes autônomos —, o **Renova PJ** transforma a gestão de inadimplência em uma operação preditiva, ágil e altamente eficiente.
 ---
 
 ## 🔗 Links Úteis
