@@ -48,7 +48,7 @@ Com essa abordagem de ponta a ponta — unindo preditividade, analytics, RAG e a
 ## 🛠️ Arquitetura
 A arquitetura do Renova PJ foi projetada de forma modular, separando a interface gráfica (Streamlit), os serviços de suporte (RAG, Agente e ML), as bases de dados e os artefatos de modelo. Essa estrutura garante facilidade de manutenção e rastreabilidade dos componentes do projeto
 
-```text
+
 itau_recupera_pj/
 │
 ├── app.py                      # Ponto de entrada (módulo principal do Streamlit)
@@ -87,7 +87,7 @@ itau_recupera_pj/
 ├── notebooks/                  # Notebooks Jupyter de EDA, treino e avaliação
 ├── imagens/                    # Identidade visual, artes do app e diagramas de arquitetura
 └── uteis/                      # Utilitários auxiliares (extrator de texto, etc.)
-```
+
 ### Arquitetura da Solução
 
 A arquitetura do **Renova PJ** foi projetada de forma modular, separando a interface gráfica (Streamlit), os serviços de suporte (RAG, Agente e ML), as bases de dados e os artefatos de modelo. Essa estrutura garante facilidade de manutenção e rastreabilidade dos componentes do projeto.
