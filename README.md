@@ -48,45 +48,47 @@ Com essa abordagem de ponta a ponta — unindo preditividade, analytics, RAG e a
 ## 🛠️ Arquitetura
 A arquitetura do Renova PJ foi projetada de forma modular, separando a interface gráfica (Streamlit), os serviços de suporte (RAG, Agente e ML), as bases de dados e os artefatos de modelo. Essa estrutura garante facilidade de manutenção e rastreabilidade dos componentes do projeto
 
-
-itau_recupera_pj/
+```text
+recupera_pj/
 │
-├── app.py                      # Ponto de entrada (módulo principal do Streamlit)
-├── requirements.txt            # Dependências do projeto
+├── app.py                       # Ponto de entrada (módulo principal do Streamlit)
+├── requirements.txt             # Dependências do projeto
 │
-├── abas/                       # Páginas da interface gráfica (Streamlit)
-│   ├── 1_analytics.py          # Dashboard de indicadores gerais
+├── abas/                        # Páginas da interface gráfica (Streamlit)
+│   ├── 1_analytics.py           # Dashboard de indicadores gerais
 │   ├── 2_rag_documentos.py     # Consulta e navegação na base de conhecimento
 │   ├── 3_assistente_ia.py      # Interface do Assistente Autônomo
 │   ├── 4_modelo_preditivo.py   # Visualização e análises do modelo ML
 │   ├── 5_metricas_rag.py       # Dashboard de avaliação do RAG
 │   └── 6_metricas_agente.py    # Dashboard de avaliação do Agente (LLM-as-a-Judge)
 │
-├── src/ (ou componentes)       # Código backend e motores de execução
-│   ├── rag/                    # Pipeline de vetorização e busca RAG
-│   ├── assistente/             # Lógica e orquestração do Agente Autônomo
-│   └── modelagem_preditiva/    # Scripts de pré-processamento e inferência
+├── src/                         # Código backend e motores de execução
+│   ├── rag/                     # Pipeline de vetorização e busca RAG
+│   ├── assistente/              # Lógica e orquestração do Agente Autônomo
+│   └── modelagem_preditiva/     # Scripts de pré-processamento e inferência
 │
-├── bases_tratadas/             # Datasets de entrada sanitizados
-│   ├── clientes_limpos.csv     # Base de clientes tratada (sem valores nulos)
+├── bases_tratadas/              # Datasets de entrada sanitizados
+│   ├── clientes_limpos.csv     # Base de clientes tratada
 │   ├── abt_regularizacao_30d.csv # Analytical Base Table (ABT) para o modelo
 │   ├── documentos_textos.csv   # Textos extraídos e prontos para vetorização
-│   └── golden_set.csv          # Conjunto de teste rotulado para avaliação do RAG
+│   └── golden_set.csv           # Conjunto de teste rotulado para avaliação do RAG
 │
-├── chroma_db/                  # Banco de dados vetorial persistido
-├── modelos/                    # Objetos de ML treinados e serializados (.pkl/.json)
-├── resultados/                 # Saídas das inferências e métricas salvas
-│   ├── inferencias_clientes.csv # Previsões de propensão aplicadas a todos os clientes
+├── chroma_db/                   # Banco de dados vetorial persistido
+├── modelos/                     # Objetos de ML treinados e serializados (.pkl/.json)
+├── resultados/                  # Saídas das inferências e métricas salvas
+│   ├── inferencias_clientes.csv # Previsões de propensão aplicadas aos clientes
 │   └── metricas_agente.csv      # Resultados das avaliações do agente
 │
-├── code/                       # Scripts de suporte de infraestrutura
-│   ├── config_log.py           # Configuração centralizada de logs
-│   └── proxies.py              # Definições e rotas de proxy
+├── code/                        # Scripts de suporte de infraestrutura
+│   ├── config_log.py            # Configuração centralizada de logs
+│   └── proxies.py               # Definições e rotas de proxy
 │
-├── logs/                       # Registros de log gerados durante a execução do app
-├── notebooks/                  # Notebooks Jupyter de EDA, treino e avaliação
-├── imagens/                    # Identidade visual, artes do app e diagramas de arquitetura
-└── uteis/                      # Utilitários auxiliares (extrator de texto, etc.)
+├── logs/                        # Registros de log gerados durante a execução do app
+├── notebooks/                   # Notebooks Jupyter de EDA, treino e avaliação
+├── imagens/                     # Identidade visual e diagramas de arquitetura
+└── uteis/                       # Utilitários auxiliares
+```
+
 
 ### Arquitetura da Solução
 
