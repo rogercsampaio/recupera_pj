@@ -46,7 +46,4 @@ Unidade de análise: uma interação registrada entre a instituição fictícia 
 
 Para qualquer feature derivada, a elegibilidade temporal deve ser calculada relativamente à `data_referencia` do respectivo cliente.
 
-## Observação de privacidade
-
-Não existem nomes, documentos, telefones, e-mails, endereços ou identificadores reais. Todos os registros foram gerados programaticamente com seed fixa.
 
